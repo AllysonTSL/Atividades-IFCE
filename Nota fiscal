@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese_Brazil");
+    
+    char p1[18], p2[18], p3 [18];
+    float v1, v2, v3;
+    int qt1, qt2, qt3;
+    
+    float total;
+    
+    printf("Escreva o nome do produto: ");
+    gets(p1);
+    printf("Escreva o valor do produto: ");
+    scanf("%f", &v1);
+    printf("Escreva a quantidade do produto: ");
+    scanf("%d", &qt1);
+    fflush(stdin);
+    
+    printf("\nEscreva o nome do produto: ");
+    gets(p2);
+    printf("Escreva o valor do produto: ");
+    scanf("%f", &v2);
+    printf("Escreva a quantidade do produto: ");
+    scanf("%d", &qt2);
+    fflush(stdin);
+    
+    printf("\nEscreva o nome do produto: ");
+    gets(p3);
+    printf("Escreva o valor do produto: ");
+    scanf("%f", &v3);
+    printf("Escreva a quantidade do produto: ");
+    scanf("%d", &qt3);
+    fflush(stdin);
+    
+    total = v1 * qt1 + v2 * qt2 + v3 * qt3;
+    
+    system("cls");
+    
+    printf("|%-20s |%-18s |%-15s |%-15s|\n", "Produto", "Valor unitário", "Quantidade", "Preço Total");
+	printf("|%-20s |R$ %15.2f |%-15d |R$ %12.2f|\n", p1, v1, qt1, v1*qt1);
+	printf("|%-20s |R$ %15.2f |%-15d |R$ %12.2f|\n", p2, v2, qt2, v2*qt2);
+	printf("|%-20s |R$ %15.2f |%-15d |R$ %12.2f|\n", p3, v3, qt3, v3*qt3);
+	printf("|%-20s |%-18s |%-15s |%-15s|\n", "", "", "", "");
+	printf("|%-20s |%-18s |%-15s |%-15s|\n", "", "", "", "");
+	printf("|%-20s |%-18s |%-15s |%-15s|\n", "", "", "", "");
+	printf("|%-20s |%-18s |%-15s |R$ %12.2f|\n", "", "", "Total", total);
+	
+	system("pause");
+	return 0;
+}
