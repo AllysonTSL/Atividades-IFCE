@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+    
+    setlocale(LC_ALL, "Portuguese_Brazil");
+    
+    int z, x;
+    int resultado = 1;
+    
+    printf("Este programa eleva x a z\n");
+    
+    printf("\nDigite o x: ");
+    scanf("%d", &x);
+    
+    printf("\nDigite o z: ");
+    scanf("%d", &z);
+    
+    for(int i = 1; i <= z; i++){
+        
+        resultado = resultado * x;
+        
+    }
+    printf("\nO resultado é %d", resultado);
+}
